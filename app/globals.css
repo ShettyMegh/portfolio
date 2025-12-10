@@ -126,3 +126,17 @@
 html {
   scroll-behavior: smooth;
 }
+/* 
+.gradient-layer {
+  background: linear-gradient(
+    to bottom,
+    var(--color-cyan-950) 0%,
+    transparent 100%
+  );
+} */
+
+@media (max-width: 639px) {
+  .leader-line {
+    display: none !important;
+  }
+}

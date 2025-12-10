@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { NavbarDesktop } from "@/features/common/components/navbar-desktop";
@@ -29,14 +30,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background dark:bg-background`}
       >
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"
+          strategy="afterInteractive"
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          {/* <div className="min-h-[30vh] w-full absolute top-0 z-0 gradient-layer rotate-300 translate-x-[-30vw]" /> */}
           <NavbarDesktop />
-
           {children}
         </ThemeProvider>
       </body>
