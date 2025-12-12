@@ -7,13 +7,17 @@ const HomeContent = () => {
   return (
     <div className="min-h-[calc(100vh-132px)] flex flex-col  w-full justify-center items-center">
       <ProfileDetails />
-      <div className="text-center mt-6">
-        <div className="flex justify-center items-center text-foreground/60 text-5xl sm:text-6xl md:text-7xl">
+      <div className="text-center mt-8">
+        <div className="inline-flex flex-wrap justify-center items-center text-foreground/60 text-4xl sm:text-6xl md:text-7xl">
           <h1>Crafting Pix</h1>
-          <ScanEyeIcon strokeWidth={1.2} size={64} className="text-blue-500" />
+          <ScanEyeIcon
+            strokeWidth={1.2}
+            size={64}
+            className="text-blue-500 w-10 h-10 sm:w-16 sm:h-16"
+          />
           <h1>l</h1>
         </div>
-        <h1 className="text-foreground text-5xl sm:text-6xl md:text-7xl">
+        <h1 className="text-foreground text-4xl sm:text-6xl md:text-7xl">
           Perfect Frontends
         </h1>
       </div>
@@ -22,20 +26,26 @@ const HomeContent = () => {
         web applications.
       </p>
 
-      <div className="flex item-center justify-center gap-4 mt-12">
-        <Link href="/projects">
+      <div className="flex item-center justify-center gap-4 mt-12 flex-wrap">
+        <Link className="flex-1 w-full sm:flex-none" href="/projects">
           <Button
             size="lg"
-            className="h-10 text-base bg-blue-500 rounded-xl hover:bg-blue-600"
+            className="w-full h-10 text-base bg-blue-500 rounded-xl hover:bg-blue-600"
           >
             <BriefcaseBusinessIcon />
             View Projects
           </Button>
         </Link>
-        <Button size="lg" className="h-10 text-base rounded-xl">
-          <DownloadIcon />
-          Download Resume
-        </Button>
+        <Link
+          className="flex-1 sm:flex-none w-full"
+          href="/Meghanath_Shetty_Resume.pdf"
+          download
+        >
+          <Button size="lg" className="h-10 text-base rounded-xl w-full">
+            <DownloadIcon />
+            Download Resume
+          </Button>
+        </Link>
       </div>
     </div>
   );

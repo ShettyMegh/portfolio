@@ -23,6 +23,7 @@ const ProfileDetails = () => {
   const avatarRef = useRef<HTMLDivElement | null>(null);
   const nameRef = useRef<HTMLParagraphElement | null>(null);
   const destRef = useRef<HTMLParagraphElement | null>(null);
+  const mailRef = useRef<HTMLParagraphElement | null>(null);
   const expRef = useRef<HTMLParagraphElement | null>(null);
   const cityRef = useRef<HTMLParagraphElement | null>(null);
   useEffect(() => {
@@ -30,6 +31,7 @@ const ProfileDetails = () => {
     let line2: LeaderLineInstance | null = null;
     let line3: LeaderLineInstance | null = null;
     let line4: LeaderLineInstance | null = null;
+    let line5: LeaderLineInstance | null = null;
     let cancelled = false;
     let attempts = 0;
     const maxAttempts = 50; // retry for ~5s
@@ -39,6 +41,7 @@ const ProfileDetails = () => {
       line2?.position?.();
       line3?.position?.();
       line4?.position?.();
+      line5?.position?.();
     };
 
     const attachLines = () => {
@@ -53,7 +56,8 @@ const ProfileDetails = () => {
         !nameRef.current ||
         !destRef.current ||
         !expRef.current ||
-        !cityRef.current
+        !cityRef.current ||
+        !mailRef.current
       ) {
         setTimeout(attachLines, 100);
         return;
@@ -95,6 +99,14 @@ const ProfileDetails = () => {
         endPlug: "arrow3",
       });
 
+      line5 = new LeaderLineCtor(avatarRef.current, mailRef.current, {
+        color: colors.blue[500],
+        size: 2,
+        path: "grid",
+        dash: { animation: true },
+        startPlug: "disc",
+        endPlug: "arrow3",
+      });
       window.addEventListener("resize", positionLines);
       window.addEventListener("scroll", positionLines, true);
     };
@@ -125,13 +137,18 @@ const ProfileDetails = () => {
           className="object-cover object-top h-[80px] w-[80px] sm:w-[115px] sm:h-[115px]"
         />
       </div>
-      <div className="text-xs sm:text-sm flex flex-col gap-1 sm:gap-2">
+      <div className="text-sm sm:text-sm flex flex-col gap-1 sm:gap-2 items-center sm:items-start">
         <p ref={nameRef} className="pl-1 font-semibold">
           🧔🏻‍♂️ Meghanath S Shetty
         </p>
         <p ref={destRef} className="pl-1 font-medium">
           💼 Senior Frontend Dev
         </p>
+        <a href="mailto:meghanathshetty108@gmail.com">
+          <p ref={mailRef} className="pl-1 font-medium underline opacity-80">
+            📧 meghanathshetty108
+          </p>
+        </a>
         <p ref={expRef} className="pl-1 opacity-80">
           🕒 2.5 years
         </p>
