@@ -48,18 +48,23 @@ export function NavbarDesktop() {
 
   return (
     <div className="fixed left-[50%] translate-x-[-50%] top-4 flex items-center gap-2 z-1 w-full justify-center">
-      <div className="bg-background rounded-md">
+      <div className="py-2 px-3 bg-secondary/50 dark:bg-secondary/50 backdrop-blur-sm rounded-2xl shadow-lg">
         {mounted && curTheme.resolvedTheme && (
           <Image src={src} alt="Meghanath S Shetty" height={40} width={40} />
         )}
       </div>
-      <div className=" w-max py-2 px-4 bg-secondary/50 dark:bg-secondary/50 backdrop-blur-sm rounded-2xl shadow-xs">
+      <div className="w-max py-2 px-4 bg-secondary/50 dark:bg-secondary/50 backdrop-blur-sm rounded-2xl shadow-lg">
         <NavigationMenu viewport={isMobile}>
           <NavigationMenuList className="flex-wrap gap-3">
             <NavigationMenuItem>
               <NavigationMenuLink asChild className="rounded-full p-0">
                 <Link href="/">
-                  <Button size="icon-lg" variant="ghost">
+                  <Button
+                    size="icon-lg"
+                    className="rounded-full"
+                    variant="ghost"
+                    tabIndex={-1}
+                  >
                     <HomeIcon className="h-6! w-6!" size={55} />
                   </Button>
                 </Link>
@@ -72,6 +77,7 @@ export function NavbarDesktop() {
                     size="icon-lg"
                     className="rounded-full"
                     variant="ghost"
+                    tabIndex={-1}
                   >
                     <BriefcaseBusinessIcon className="h-6! w-6!" />
                   </Button>
@@ -85,6 +91,7 @@ export function NavbarDesktop() {
                     size="icon-lg"
                     className="rounded-full"
                     variant="ghost"
+                    tabIndex={-1}
                   >
                     <WandIcon className="h-6! w-6!" />
                   </Button>
@@ -98,6 +105,7 @@ export function NavbarDesktop() {
                     size="icon-lg"
                     className="rounded-full"
                     variant="ghost"
+                    tabIndex={-1}
                   >
                     <PenLineIcon className="h-6! w-6!" />
                   </Button>
@@ -111,6 +119,7 @@ export function NavbarDesktop() {
                     size="icon-lg"
                     className="rounded-full"
                     variant="ghost"
+                    tabIndex={-1}
                   >
                     <PhoneIcon className="h-6! w-6!" />
                   </Button>
