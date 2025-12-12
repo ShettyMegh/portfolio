@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <MainWrapper>
       <HomeContent />
-      <div id="skills" className="flex min-h-screen">
+      <div id="skills" className="flex min-h-screen mt-32">
         Skills
       </div>
     </MainWrapper>

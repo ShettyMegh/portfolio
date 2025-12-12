@@ -6,7 +6,7 @@ import TargetCursor from "@/features/common/components/react-bits/target-cursor"
 
 const HomeContent = () => {
   return (
-    <div className="min-h-[calc(100vh-132px)] flex flex-col  w-full justify-center items-center">
+    <div className="min-h-[calc(100vh-132px)] flex flex-col  w-full justify-center items-center relative z-1">
       <TargetCursor spinDuration={2} parallaxOn={true} />
       <ProfileDetails />
       <div className="text-center mt-8">

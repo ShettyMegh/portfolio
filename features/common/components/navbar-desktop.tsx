@@ -46,7 +46,7 @@ export function NavbarDesktop() {
   const src = getThemeImage();
 
   return (
-    <div className="fixed left-[50%] translate-x-[-50%] top-4 flex items-center gap-2 z-1 w-full justify-center">
+    <div className="fixed left-[50%] translate-x-[-50%] top-4 flex items-center gap-2 z-2 w-full justify-center">
       <div className="flex py-1 px-2 sm:py-2 sm:px-4 bg-secondary/50 dark:bg-secondary/50 backdrop-blur-sm rounded-2xl shadow-md">
         <Link href="/" className="inline-flex">
           <Button
