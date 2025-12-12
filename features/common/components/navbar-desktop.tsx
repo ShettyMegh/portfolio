@@ -47,7 +47,7 @@ export function NavbarDesktop() {
   const src = getThemeImage();
 
   return (
-    <div className="bottom-2 fixed left-[50%] translate-x-[-50%] sm:bottom-auto sm:top-4 flex items-center gap-2 z-1">
+    <div className="fixed left-[50%] translate-x-[-50%] top-4 flex items-center gap-2 z-1 w-full justify-center">
       <div className="bg-background rounded-md">
         {mounted && curTheme.resolvedTheme && (
           <Image src={src} alt="Meghanath S Shetty" height={40} width={40} />
@@ -55,67 +55,64 @@ export function NavbarDesktop() {
       </div>
       <div className=" w-max py-2 px-4 bg-secondary/50 dark:bg-secondary/50 backdrop-blur-sm rounded-2xl shadow-xs">
         <NavigationMenu viewport={isMobile}>
-          <NavigationMenuList className="flex-wrap">
+          <NavigationMenuList className="flex-wrap gap-3">
             <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={`navigationMenuTriggerStyle() p-0`}
-              >
+              <NavigationMenuLink asChild className="rounded-full p-0">
                 <Link href="/">
                   <Button size="icon-lg" variant="ghost">
-                    <HomeIcon size={25} />
+                    <HomeIcon className="h-6! w-6!" size={55} />
                   </Button>
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={`navigationMenuTriggerStyle() p-0`}
-              >
+              <NavigationMenuLink asChild className="rounded-full p-0">
                 <Link href="/projects">
-                  {" "}
-                  <Button size="icon-lg" variant="ghost">
-                    <BriefcaseBusinessIcon />
+                  <Button
+                    size="icon-lg"
+                    className="rounded-full"
+                    variant="ghost"
+                  >
+                    <BriefcaseBusinessIcon className="h-6! w-6!" />
                   </Button>
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={`navigationMenuTriggerStyle() p-0`}
-              >
+              <NavigationMenuLink asChild className="rounded-full p-0">
                 <Link href="/#skills">
-                  {" "}
-                  <Button size="icon-lg" variant="ghost">
-                    <WandIcon />
+                  <Button
+                    size="icon-lg"
+                    className="rounded-full"
+                    variant="ghost"
+                  >
+                    <WandIcon className="h-6! w-6!" />
                   </Button>
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={`navigationMenuTriggerStyle() p-0`}
-              >
+              <NavigationMenuLink asChild className="rounded-full p-0">
                 <Link href="/blogs">
-                  {" "}
-                  <Button size="icon-lg" variant="ghost">
-                    <PenLineIcon />
+                  <Button
+                    size="icon-lg"
+                    className="rounded-full"
+                    variant="ghost"
+                  >
+                    <PenLineIcon className="h-6! w-6!" />
                   </Button>
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={`navigationMenuTriggerStyle() p-0`}
-              >
+              <NavigationMenuLink asChild className="rounded-full p-0">
                 <Link href="/contact">
-                  {" "}
-                  <Button size="icon-lg" variant="ghost">
-                    <PhoneIcon />
+                  <Button
+                    size="icon-lg"
+                    className="rounded-full"
+                    variant="ghost"
+                  >
+                    <PhoneIcon className="h-6! w-6!" />
                   </Button>
                 </Link>
               </NavigationMenuLink>

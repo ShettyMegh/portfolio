@@ -2,10 +2,12 @@ import { Button } from "@/components/ui/button";
 import { BriefcaseBusinessIcon, DownloadIcon, ScanEyeIcon } from "lucide-react";
 import Link from "next/link";
 import ProfileDetails from "./profile-details";
+import TargetCursor from "@/features/common/components/react-bits/target-cursor";
 
 const HomeContent = () => {
   return (
     <div className="min-h-[calc(100vh-132px)] flex flex-col  w-full justify-center items-center">
+      <TargetCursor spinDuration={2} parallaxOn={true} />
       <ProfileDetails />
       <div className="text-center mt-8">
         <div className="inline-flex flex-wrap justify-center items-center text-foreground/60 text-4xl sm:text-6xl md:text-7xl">
@@ -27,17 +29,17 @@ const HomeContent = () => {
       </p>
 
       <div className="flex item-center justify-center gap-4 mt-12 flex-wrap">
-        <Link className="flex-1 w-full sm:flex-none" href="/projects">
+        <Link className="flex-1 w-full sm:w-max sm:flex-none" href="/projects">
           <Button
             size="lg"
-            className="w-full h-10 text-base bg-blue-500 rounded-xl hover:bg-blue-600"
+            className="w-full h-10 text-base bg-blue-500 rounded-xl hover:bg-blue-600 cursor-target"
           >
             <BriefcaseBusinessIcon />
             View Projects
           </Button>
         </Link>
         <Link
-          className="flex-1 sm:flex-none w-full"
+          className="flex-1 sm:flex-none w-full sm:w-max cursor-target"
           href="/Meghanath_Shetty_Resume.pdf"
           download
         >
