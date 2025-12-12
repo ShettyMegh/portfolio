@@ -13,7 +13,6 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   BriefcaseBusinessIcon,
-  HomeIcon,
   PenLineIcon,
   PhoneIcon,
   WandIcon,
@@ -48,28 +47,29 @@ export function NavbarDesktop() {
 
   return (
     <div className="fixed left-[50%] translate-x-[-50%] top-4 flex items-center gap-2 z-1 w-full justify-center">
-      <div className="py-2 px-3 bg-secondary/50 dark:bg-secondary/50 backdrop-blur-sm rounded-2xl shadow-lg">
-        {mounted && curTheme.resolvedTheme && (
-          <Image src={src} alt="Meghanath S Shetty" height={40} width={40} />
-        )}
+      <div className="flex py-1 px-2 sm:py-2 sm:px-4 bg-secondary/50 dark:bg-secondary/50 backdrop-blur-sm rounded-2xl shadow-md">
+        <Link href="/" className="inline-flex">
+          <Button
+            size="icon-lg"
+            className="rounded-full"
+            variant="ghost"
+            tabIndex={-1}
+          >
+            {mounted && curTheme.resolvedTheme && (
+              <Image
+                src={src}
+                alt="Meghanath S Shetty"
+                height={40}
+                width={40}
+                className="w-9 h-9 sm:w-10 sm:h-10"
+              />
+            )}
+          </Button>
+        </Link>
       </div>
-      <div className="w-max py-2 px-4 bg-secondary/50 dark:bg-secondary/50 backdrop-blur-sm rounded-2xl shadow-lg">
+      <div className="w-max py-1 px-2 sm:py-2 sm:px-4 bg-secondary/50 dark:bg-secondary/50 backdrop-blur-sm rounded-2xl shadow-md">
         <NavigationMenu viewport={isMobile}>
           <NavigationMenuList className="flex-wrap gap-3">
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild className="rounded-full p-0">
-                <Link href="/">
-                  <Button
-                    size="icon-lg"
-                    className="rounded-full"
-                    variant="ghost"
-                    tabIndex={-1}
-                  >
-                    <HomeIcon className="h-6! w-6!" size={55} />
-                  </Button>
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink asChild className="rounded-full p-0">
                 <Link href="/projects">

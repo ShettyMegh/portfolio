@@ -121,20 +121,21 @@ const ProfileDetails = () => {
       line2?.remove?.();
       line3?.remove?.();
       line4?.remove?.();
+      line5?.remove?.();
     };
   }, []);
   return (
     <div className="relative flex items-center flex-col sm:flex-row gap-5 sm:gap-40">
       <div
         ref={avatarRef}
-        className="flex shrink-0 gap-4 h-20 w-20 sm:h-30 sm:w-30 overflow-hidden rounded-full relative border-4 border-blue-500"
+        className="flex shrink-0 gap-4 h-45 w-45 sm:h-30 sm:w-30 overflow-hidden rounded-sm sm:rounded-full relative border-4 border-blue-500"
       >
         <Image
           src="/profile.png"
           width={115}
           height={115}
           alt="Meghanath S Shetty"
-          className="object-cover object-top h-[80px] w-[80px] sm:w-[115px] sm:h-[115px]"
+          className="object-cover object-top h-45 w-45 sm:w-30 sm:h-30"
         />
       </div>
       <div className="text-sm sm:text-sm flex flex-col gap-1 sm:gap-2 items-center sm:items-start">

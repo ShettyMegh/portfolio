@@ -1,19 +1,12 @@
 "use client";
-import * as React from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 const ThemeToggle = () => {
   const { setTheme, resolvedTheme } = useTheme();
   return (
-    <div className="py-2 px-3 bg-secondary/50 dark:bg-secondary/50 backdrop-blur-sm rounded-2xl shadow-lg">
+    <div className="py-1 px-2 sm:py-2 sm:px-4 bg-secondary/50 dark:bg-secondary/50 backdrop-blur-sm rounded-2xl shadow-md">
       <Button
         size="icon-lg"
         variant="ghost"
