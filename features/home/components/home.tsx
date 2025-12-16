@@ -2,12 +2,12 @@ import { Button } from "@/components/ui/button";
 import { BriefcaseBusinessIcon, DownloadIcon, ScanEyeIcon } from "lucide-react";
 import Link from "next/link";
 import ProfileDetails from "./profile-details";
-import TargetCursor from "@/features/common/components/react-bits/target-cursor";
+// import TargetCursor from "@/features/common/components/react-bits/target-cursor";
 
 const HomeContent = () => {
   return (
     <div className="min-h-[calc(100vh-132px)] flex flex-col  w-full justify-center items-center relative z-1">
-      <TargetCursor spinDuration={2} parallaxOn={true} />
+      {/* <TargetCursor spinDuration={2} parallaxOn={true} /> */}
       <ProfileDetails />
       <div className="text-center mt-8">
         <div className="inline-flex flex-wrap justify-center items-center text-foreground/60 text-4xl sm:text-6xl md:text-7xl">

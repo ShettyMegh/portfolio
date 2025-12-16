@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { ArrowUpIcon, LinkedinIcon, XIcon } from "lucide-react";
+import { ArrowUpIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import DecryptedText from "./react-bits/decrypt-text";

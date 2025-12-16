@@ -34,7 +34,7 @@ export default function RootLayout({
         <link href="/ms-bg-white.png" rel="icon" sizes="any" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background dark:bg-background`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background dark:bg-background `}
       >
         <Script
           src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"
