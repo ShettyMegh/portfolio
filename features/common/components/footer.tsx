@@ -40,14 +40,26 @@ const Footer = () => {
       </div>
 
       <div className="flex mt-8 gap-4">
-        <Link href="https://github.com/ShettyMegh" target="_blank">
+        <Link
+          href="https://github.com/ShettyMegh"
+          target="_blank"
+          tabIndex={-1}
+        >
           <Button size="xl">Github</Button>
         </Link>
         <Link
           href="https://www.linkedin.com/in/meghanathshetty/"
+          tabIndex={-1}
           target="_blank"
         >
           <Button size="xl">LinkedIn</Button>
+        </Link>
+        <Link
+          href="mailto:meghanathshetty108@gmail.com"
+          target="_blank"
+          tabIndex={-1}
+        >
+          <Button size="xl">Email</Button>
         </Link>
       </div>
     </div>

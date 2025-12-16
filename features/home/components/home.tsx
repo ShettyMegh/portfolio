@@ -29,7 +29,11 @@ const HomeContent = () => {
       </p>
 
       <div className="flex item-center justify-center gap-4 mt-12 flex-wrap">
-        <Link className="flex-1 w-full sm:w-max sm:flex-none" href="/projects">
+        <Link
+          tabIndex={-1}
+          className="flex-1 w-full sm:w-max sm:flex-none"
+          href="/projects"
+        >
           <Button
             size="lg"
             className="w-full h-10 text-base bg-blue-500 rounded-xl hover:bg-blue-600 cursor-target"
@@ -39,6 +43,7 @@ const HomeContent = () => {
           </Button>
         </Link>
         <Link
+          tabIndex={-1}
           className="flex-1 sm:flex-none w-full sm:w-max cursor-target"
           href="/Meghanath_Shetty_Resume.pdf"
           download
