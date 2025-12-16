@@ -105,7 +105,7 @@ function Orbit({ radius, skills, duration = 40 }: OrbitProps) {
                   })}
                 />
               </div>
-              <p className="text-center text-[9px] sm:text-xs text-foreground sm:font-semibold">
+              <p className="text-center text-[9px] sm:text-xs text-foreground font-semibold">
                 {item.label}
               </p>
             </motion.div>
@@ -136,6 +136,12 @@ const INNER_SKILLS = [
     isPureBlack: false,
   },
   {
+    label: "Redux Toolkit",
+    iconUrl: "https://cdn.simpleicons.org/redux",
+    key: "redux",
+    isPureBlack: false,
+  },
+  {
     label: "NextJs",
     iconUrl: "https://cdn.simpleicons.org/nextdotjs",
     key: "nextdotjs",
@@ -146,6 +152,12 @@ const INNER_SKILLS = [
     iconUrl: "https://cdn.simpleicons.org/tailwindcss",
     key: "tailwindcss",
     isPureBlack: false,
+  },
+  {
+    label: "Radix UI",
+    iconUrl: "https://cdn.simpleicons.org/radixui",
+    key: "radixui",
+    isPureBlack: true,
   },
 ];
 
@@ -206,8 +218,14 @@ const OUTER_SKILLS = [
   },
   {
     label: "Rspack",
-    iconUrl: "https://cdn.simpleicons.org/rspack",
+    iconUrl: "/skills/rspack-logo.svg",
     key: "rspack",
+    isPureBlack: false,
+  },
+  {
+    label: "Storybook",
+    iconUrl: "https://cdn.simpleicons.org/storybook",
+    key: "storybook",
     isPureBlack: false,
   },
 ];
@@ -233,13 +251,13 @@ export default function SkillsOrbit() {
         */}
 
       {/* Inner Orbit */}
-      <OrbitRing radius={isMobile ? 70 : 150} containerSize={size} />
-      <Orbit radius={isMobile ? 70 : 150} skills={INNER_SKILLS} duration={50} />
+      <OrbitRing radius={isMobile ? 70 : 140} containerSize={size} />
+      <Orbit radius={isMobile ? 70 : 140} skills={INNER_SKILLS} duration={50} />
 
       {/* Outer Orbit (ready for future use) */}
-      <OrbitRing radius={isMobile ? 138 : 240} containerSize={size} />
+      <OrbitRing radius={isMobile ? 138 : 230} containerSize={size} />
       <Orbit
-        radius={isMobile ? 138 : 240}
+        radius={isMobile ? 138 : 230}
         skills={OUTER_SKILLS}
         duration={30}
       />

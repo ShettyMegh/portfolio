@@ -40,12 +40,15 @@ const Footer = () => {
       </div>
 
       <div className="flex mt-8 gap-4">
-        <Link href="">
+        <Link href="https://github.com/ShettyMegh" target="_blank">
           <Button size="xl">Github</Button>
         </Link>
-        <Link href="">
+        <Link
+          href="https://www.linkedin.com/in/meghanathshetty/"
+          target="_blank"
+        >
           <Button size="xl">LinkedIn</Button>
-        </Link>{" "}
+        </Link>
       </div>
     </div>
   );

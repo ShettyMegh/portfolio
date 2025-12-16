@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-
 import { useIsMobile } from "@/hooks/use-mobile";
 import {
   NavigationMenu,
@@ -13,14 +12,42 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   BriefcaseBusinessIcon,
-  PenLineIcon,
+  // PenLineIcon,
   PhoneIcon,
   WandIcon,
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState, startTransition } from "react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
-export function NavbarDesktop() {
+const NAV_ITEMS = [
+  {
+    label: "Projects",
+    path: "/projects",
+    icon: BriefcaseBusinessIcon,
+  },
+  {
+    label: "Skills",
+    path: "/#skills",
+    icon: WandIcon,
+  },
+  // {
+  //   label: "Blogs",
+  //   path: "/blogs",
+  //   icon: PenLineIcon,
+  // },
+  {
+    label: "Contact",
+    path: "/contact",
+    icon: PhoneIcon,
+  },
+];
+
+export function Navbar() {
   const isMobile = useIsMobile();
   const curTheme = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -70,62 +97,32 @@ export function NavbarDesktop() {
       <div className="w-max py-1 px-2 sm:py-2 sm:px-4 bg-secondary/50 dark:bg-secondary/50 backdrop-blur-sm rounded-2xl shadow-md">
         <NavigationMenu viewport={isMobile}>
           <NavigationMenuList className="flex-wrap gap-3">
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild className="rounded-full p-0">
-                <Link href="/projects">
-                  <Button
-                    size="icon-lg"
-                    className="rounded-full"
-                    variant="ghost"
-                    tabIndex={-1}
-                  >
-                    <BriefcaseBusinessIcon className="h-6! w-6!" />
-                  </Button>
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild className="rounded-full p-0">
-                <Link href="/#skills">
-                  <Button
-                    size="icon-lg"
-                    className="rounded-full"
-                    variant="ghost"
-                    tabIndex={-1}
-                  >
-                    <WandIcon className="h-6! w-6!" />
-                  </Button>
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild className="rounded-full p-0">
-                <Link href="/blogs">
-                  <Button
-                    size="icon-lg"
-                    className="rounded-full"
-                    variant="ghost"
-                    tabIndex={-1}
-                  >
-                    <PenLineIcon className="h-6! w-6!" />
-                  </Button>
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild className="rounded-full p-0">
-                <Link href="/contact">
-                  <Button
-                    size="icon-lg"
-                    className="rounded-full"
-                    variant="ghost"
-                    tabIndex={-1}
-                  >
-                    <PhoneIcon className="h-6! w-6!" />
-                  </Button>
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+            {NAV_ITEMS.map((item) => {
+              const Icon = item.icon;
+              return (
+                <NavigationMenuItem key={item.path}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <NavigationMenuLink asChild className="rounded-full p-0">
+                        <Link href={item.path}>
+                          <Button
+                            size="icon-lg"
+                            className="rounded-full"
+                            variant="ghost"
+                            tabIndex={-1}
+                          >
+                            <Icon className="h-6! w-6!" />
+                          </Button>
+                        </Link>
+                      </NavigationMenuLink>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p className="text-xs!">{item.label}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </NavigationMenuItem>
+              );
+            })}
           </NavigationMenuList>
         </NavigationMenu>
       </div>
