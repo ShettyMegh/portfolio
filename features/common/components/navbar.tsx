@@ -7,7 +7,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import ThemeToggle from "./theme-toggle";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
