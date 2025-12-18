@@ -45,7 +45,7 @@ const HomeContent = () => {
         <Link
           tabIndex={-1}
           className="flex-1 sm:flex-none w-full sm:w-max cursor-target"
-          href="/Meghanath_Shetty_Resume.pdf"
+          href="/Meghanath_Resume.pdf"
           download
         >
           <Button size="lg" className="h-10 text-base rounded-xl w-full">
