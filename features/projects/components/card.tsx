@@ -1,3 +1,4 @@
+"use client";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -56,7 +57,13 @@ const Card = ({
               })}
               {splitPills.length > 3 ? (
                 <Tooltip>
-                  <TooltipTrigger asChild>
+                  <TooltipTrigger
+                    asChild
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      e.preventDefault();
+                    }}
+                  >
                     <Badge className="text-[10px] font-normal bg-foreground/80">
                       {" "}
                       <p className="max-w-12 truncate">
