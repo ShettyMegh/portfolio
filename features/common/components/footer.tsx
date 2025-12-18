@@ -34,7 +34,7 @@ const Footer = () => {
         <p className="text-xs font-semibold">
           LOOKING FOR A FRONTEND DEVELOPER?
         </p>
-        <Link href="tel:+918762241682">
+        <Link href="tel:+917022189794">
           <DecryptedText
             text="LET'S TALK"
             parentClassName="italic text-5xl sm:text-6xl md:text-8xl lg:text-9xl cursor-target tracking-widest"
