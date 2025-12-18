@@ -159,3 +159,8 @@ html {
 .loading-logo {
   animation: scaleAnim 2s infinite;
 }
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}

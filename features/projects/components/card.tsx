@@ -14,13 +14,13 @@ const Card = ({
   desc,
   imgUrl,
   href = "",
-  pills = "NextJs, Tailwind Css, Redux, CSS, asdas, asd,asd,asd,asd,asd",
+  pills,
 }: {
   title: string;
   desc: string;
   imgUrl: string;
   href: string;
-  pills?: string;
+  pills: string;
 }) => {
   const splitPills = pills.split(",");
   return (
@@ -68,9 +68,16 @@ const Card = ({
                     {splitPills.slice(2, splitPills.length).join(", ")}
                   </TooltipContent>
                 </Tooltip>
-              ) : null}
+              ) : (
+                <Badge
+                  className="text-[10px] font-normal bg-foreground/80"
+                  title={splitPills[2]}
+                >
+                  <p className="max-w-12 truncate">{splitPills[2]}</p>
+                </Badge>
+              )}
             </div>
-            <Button className="w-full h-8 mt-4 text-base bg-blue-500  hover:bg-blue-600 cursor-target">
+            <Button className="w-full h-8 mt-4 text-sm bg-blue-500  hover:bg-blue-600 cursor-target">
               View Project
               <ExternalLinkIcon />
             </Button>

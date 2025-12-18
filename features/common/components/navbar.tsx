@@ -23,6 +23,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { AnimatedThemeToggler } from "@/components/ui/animate-theme";
 
 const NAV_ITEMS = [
   {
@@ -126,7 +127,9 @@ export function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      <ThemeToggle />
+      <div className="py-1 px-2 sm:py-2 sm:px-4 bg-secondary/50 dark:bg-secondary/50 backdrop-blur-sm rounded-2xl shadow-md">
+        <AnimatedThemeToggler />
+      </div>
     </div>
   );
 }
