@@ -44,8 +44,8 @@ const ProjectsContent = () => {
                 In the lab right now 🛠️
               </p>
             </div> */}
-            <div className="absolute w-full rotate-45 top-[16px] right-[-88px]">
-              <h3 className="text-sm mt-4 bg-foreground text-background/80 text-center">
+            <div className="absolute w-full rotate-45 top-[16px] right-[-88px] shadow-sm">
+              <h3 className="text-sm mt-4 bg-foreground/80 text-background text-center">
                 In Progress
               </h3>
             </div>

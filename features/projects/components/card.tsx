@@ -1,9 +1,11 @@
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { ExternalLinkIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -68,6 +70,10 @@ const Card = ({
                 </Tooltip>
               ) : null}
             </div>
+            <Button className="w-full h-8 mt-4 text-base bg-blue-500  hover:bg-blue-600 cursor-target">
+              View Project
+              <ExternalLinkIcon />
+            </Button>
           </div>
         </div>
       </Link>

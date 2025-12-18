@@ -32,7 +32,7 @@ const HomeContent = () => {
         <Link
           tabIndex={-1}
           className="flex-1 w-full sm:w-max sm:flex-none"
-          href="/projects"
+          href="/#projects"
         >
           <Button
             size="lg"

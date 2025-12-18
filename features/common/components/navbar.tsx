@@ -42,7 +42,7 @@ const NAV_ITEMS = [
   // },
   {
     label: "Contact",
-    path: "/contact",
+    path: "tel:+918762241682",
     icon: PhoneIcon,
   },
 ];
