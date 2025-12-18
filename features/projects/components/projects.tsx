@@ -13,6 +13,7 @@ const ProjectsContent = () => {
           desc="A Commercial Construction Website."
           imgUrl="/projects/urbangruha.png"
           href="https://urbangruha.com"
+          pills="NextJs, Shadcn, Tailwind CSS, Framer Motion"
         />
 
         <div className="sm:max-w-[246px] pb-3 w-full rounded-2xl overflow-hidden hover:scale-[1.01] dark:bg-blue-950/40  bg-gray-100  drop-shadow-lg relative">
