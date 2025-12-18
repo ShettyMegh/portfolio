@@ -27,7 +27,7 @@ import {
 const NAV_ITEMS = [
   {
     label: "Projects",
-    path: "/projects",
+    path: "/#projects",
     icon: BriefcaseBusinessIcon,
   },
   {

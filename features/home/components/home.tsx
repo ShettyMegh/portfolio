@@ -28,7 +28,7 @@ const HomeContent = () => {
         web applications.
       </p>
 
-      <div className="flex item-center justify-center gap-4 mt-12 flex-wrap">
+      <div className="flex item-center justify-center gap-4 mt-8 flex-wrap">
         <Link
           tabIndex={-1}
           className="flex-1 w-full sm:w-max sm:flex-none"
