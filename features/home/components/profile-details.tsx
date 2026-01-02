@@ -136,6 +136,7 @@ const ProfileDetails = () => {
           height={115}
           alt="Meghanath S Shetty"
           className="object-cover object-top h-45 w-45 sm:w-30 sm:h-30"
+          fetchPriority="high"
         />
       </div>
       <div className="text-sm sm:text-sm flex flex-col gap-1 sm:gap-2 items-center sm:items-start">
