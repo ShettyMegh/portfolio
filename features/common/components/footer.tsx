@@ -25,7 +25,12 @@ const Footer = () => {
         <p className="text-sm">&copy; {curYear}</p>
         <div className="flex gap-2 items-center">
           <p className="text-md uppercase spacing">Back to Top</p>
-          <Button className="rounded-full" size="icon" onClick={scrollTop}>
+          <Button
+            className="rounded-full"
+            aria-label="Scroll to Top"
+            size="icon"
+            onClick={scrollTop}
+          >
             <ArrowUpIcon />
           </Button>
         </div>

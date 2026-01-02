@@ -19,7 +19,7 @@ export const AnimatedThemeToggler = ({
   ...props
 }: AnimatedThemeTogglerProps) => {
   const { resolvedTheme, setTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
+  const isDark = resolvedTheme === "dark" || true;
 
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -71,6 +71,7 @@ export const AnimatedThemeToggler = ({
       className={cn(className)}
       size="icon-lg"
       variant="ghost"
+      aria-label="Toggle theme"
       {...props}
     >
       {isDark ? <Sun /> : <Moon />}

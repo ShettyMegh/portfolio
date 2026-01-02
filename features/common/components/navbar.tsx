@@ -75,13 +75,14 @@ export function Navbar() {
   return (
     <div className="fixed left-[50%] translate-x-[-50%] top-4 flex items-center gap-2 z-2 w-full justify-center">
       <div className="flex py-1 px-2 sm:py-2 sm:px-4 bg-secondary/50 dark:bg-secondary/50 backdrop-blur-sm rounded-2xl shadow-md">
-        <Link href="/" className="inline-flex">
-          <Button
-            size="icon-lg"
-            className="rounded-full"
-            variant="ghost"
-            tabIndex={-1}
-          >
+        <Button
+          size="icon-lg"
+          className="rounded-full"
+          variant="ghost"
+          aria-label="Home"
+          asChild
+        >
+          <Link href="/" className="inline-flex">
             {mounted && curTheme.resolvedTheme && (
               <Image
                 src={src}
@@ -91,8 +92,8 @@ export function Navbar() {
                 className="w-9 h-9 sm:w-10 sm:h-10"
               />
             )}
-          </Button>
-        </Link>
+          </Link>
+        </Button>
       </div>
       <div className="w-max py-1 px-2 sm:py-2 sm:px-4 bg-secondary/50 dark:bg-secondary/50 backdrop-blur-sm rounded-2xl shadow-md">
         <NavigationMenu viewport={isMobile}>
@@ -104,16 +105,17 @@ export function Navbar() {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <NavigationMenuLink asChild className="rounded-full p-0">
-                        <Link href={item.path}>
-                          <Button
-                            size="icon-lg"
-                            className="rounded-full"
-                            variant="ghost"
-                            tabIndex={-1}
-                          >
+                        <Button
+                          size="icon-lg"
+                          className="rounded-full"
+                          variant="ghost"
+                          aria-label={item.label}
+                          asChild
+                        >
+                          <Link href={item.path}>
                             <Icon className="h-6! w-6!" />
-                          </Button>
-                        </Link>
+                          </Link>
+                        </Button>
                       </NavigationMenuLink>
                     </TooltipTrigger>
                     <TooltipContent>
