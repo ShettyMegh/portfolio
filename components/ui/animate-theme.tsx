@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { flushSync } from "react-dom";
 import { useTheme } from "next-themes";
@@ -19,9 +19,20 @@ export const AnimatedThemeToggler = ({
 	...props
 }: AnimatedThemeTogglerProps) => {
 	const { resolvedTheme, setTheme } = useTheme();
-	const isDark = resolvedTheme === "dark";
+	const [mounted, setMounted] = useState(false);
+
+	useEffect(() => {
+		setMounted(true);
+	}, []);
+
+	const isDark = !!(resolvedTheme === "dark");
 
 	const buttonRef = useRef<HTMLButtonElement>(null);
+
+	const getIcon = () => {
+		if (!mounted) return <Moon />;
+		return isDark ? <Sun /> : <Moon />;
+	};
 
 	const toggleTheme = useCallback(async () => {
 		if (!buttonRef.current) return;
@@ -74,7 +85,7 @@ export const AnimatedThemeToggler = ({
 			aria-label="Toggle theme"
 			{...props}
 		>
-			{isDark ? <Sun /> : <Moon />}
+			{getIcon()}
 			<span className="sr-only">Toggle theme</span>
 		</Button>
 	);
